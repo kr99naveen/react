@@ -26,7 +26,7 @@ class Counter extends Component {
             count: prevSt.count + 1
         }))
 
-        // this will not rerender the this.componentDidCatch, for component
+        // this will not rerender the componentßßß, for component
         // to be rerender, use setState method, not manual changing the state
 
         // this.state.count = this.state.count + 1;
