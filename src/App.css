@@ -32,7 +32,130 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+  Container holding Sidebar and Main area (Header + Home) 
+  Using flex to place children side by side
+*/
+.components {
+  display: flex;
+  /* Enables flex layout to arrange children horizontally */
+  height: 100vh;
+  /* Makes the container fill the full viewport height */
+  width: 100%;
+  /* Full width of the page */
+  background-color: #f0f0f0;
+  /* Light gray background for contrast */
+}
+
+/* 
+  Sidebar styles 
+  This is the vertical navigation or side panel
+*/
+.sidebar {
+  width: 150px;
+  /* Fixed width for sidebar */
+  background-color: #ff6b6b;
+  /* Red-ish color for visibility */
+  border-radius: 10px;
+  /* Rounded corners for aesthetics */
+  padding: 10px;
+  /* Space inside the box */
+  margin: 10px;
+  /* Space outside the box (between sidebar and container edge) */
+  color: white;
+  /* Text color */
+  font-weight: bold;
+  /* Makes sidebar text stand out */
+
+  /* Flex inside sidebar to arrange internal elements vertically */
+  /* display: flex; */
+  flex-direction: column;
+  /* Stacks items vertically */
+  justify-content: space-between;
+  /* Evenly distributes items vertically */
+}
+
+/* 
+  Inner components (Header + Home) container
+  Stacks Header and Home vertically on the right of sidebar
+*/
+.innerComponents {
+  flex: 1;
+  /* Fills remaining horizontal space next to sidebar */
+  display: flex;
+  flex-direction: column;
+  /* Stacks Header on top and Home below */
+  margin: 10px;
+  /* Space around this container */
+}
+
+/* 
+  Header styles 
+  Top part of innerComponents
+*/
+.header {
+  background-color: #ff8787;
+  /* Slightly different red for visual separation */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 10px;
+  /* Space inside the box */
+  color: white;
+  /* Text color */
+  margin-bottom: 10px;
+  /* Space between Header and Home */
+  text-align: left;
+  /* Center text horizontally */
+  font-size: 1.5rem;
+  /* Makes the header text larger */
+}
+
+/* 
+  Home styles 
+  Bottom part of innerComponents
+*/
+.home {
+  background-color: #ffa07a;
+  /* Another shade of red for differentiation */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 10px;
+  /* Space inside the box */
+  color: white;
+  /* Text color */
+  flex: 1;
+  /* Takes all remaining vertical space under Header */
+  overflow-y: auto;
+  /* Adds scrollbar if content exceeds height */
+}
+
+.sidebarBtn {
+  background-color: rgb(43, 164, 43);
+  border: black;
+  border-width: 25px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  width: 90%;
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  /* animation: spin 1s linear infinite; */
 }
