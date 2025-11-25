@@ -5,7 +5,7 @@ import React from 'react'
 //in functional component, re-rendering only shallow comparision changes
 //use Memo
 function MemoComp({ name }) {
-    console.log("****** parent component **********", name);
+    console.log("****** memo component **********", name);
     return (
         <div>
             Memo Component

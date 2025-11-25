@@ -159,3 +159,17 @@
   font-weight: bold;
   /* animation: spin 1s linear infinite; */
 }
+
+button {
+  background-color: rgb(233, 69, 15);
+  border: black;
+  border-width: 15px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  width: 15%;
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
